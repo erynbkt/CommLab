@@ -11,7 +11,7 @@ my first project **goldie** was about my cat...goldie
 ![goldie](goldie-original.png)
 
 #### how not to sleep
-second was about some scenarios that could happen when trying to sleep, while providing some advice
+second was about some sillyscenarios that could happen when trying to sleep, while providing some advice
 
 #### duolingo parody
 usually, duolingo takes a long time teaching the user languages, which is why i decided to make a parody of it.
