@@ -1,6 +1,7 @@
 # hi! i'm Eryn
 
 for now, i'm learning html/css for my communications class
+
 these are my projects:
 - [duolingo parody](duolingo-home)
 - [goldie](goldie)
