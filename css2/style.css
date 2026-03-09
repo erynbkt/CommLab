@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background-color:darksalmon;
+}
+
+.mainWrapper {
+    background-color:blanchedalmond;
+    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.headerWrapper {
+    background-color: brown;
+}
+
+.headerWrapper h1 {
+    text-align: center;
+    color: blanchedalmond;
+}
+
+.navButton {
+    background-color: blanchedalmond;
+    width: 100px;
+    height: 23px;
+    text-align: center;
+    outline: 2px solid brown;
+    display: inline-block;
+    margin: 10px;
+}
+
+#navButton {
+    outline: 2px dotted black;
+    text-align: center;
+}

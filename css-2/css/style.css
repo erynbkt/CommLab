@@ -1,0 +1,22 @@
+body {
+   margin: 0; 
+}
+
+.punch {
+    width: 400px;
+    background-color: bisque;
+    /* margin: 45px; */
+}
+
+.punchWrapper {
+    border: 1px dashed ;
+    width: 400px;
+    margin-bottom: 30px;
+    /* margin-left: 10px; */
+    /* padding: 5px; */
+    /* display: inline-block; */
+}
+
+.punchWrapper:hover {
+    border: 4px solid brown;
+}

@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-color:azure;
+}
+
+.box {
+    outline: 1px dashed black;
+    width: 200px;
+    padding: 30px;
+}
+
+.box p{
+    background-color:darkturquoise;
+    text-align: center;
+}
+
+.one {
+    position: relative;
+    /* in relation to their original/natural position */
+    left: 10px;
+    top: 20px ;
+}
+
+.one span {
+    position: relative;
+    left: 2px;
+    top: -3px;
+}
+
+.two {
+    position: absolute;
+    /* other boxes pretend it doesn't exist */
+    /* in relation to the page */
+    left: 300px;
+    top: 0px;
+}
+
+.three {
+    position: fixed;
+    /* in relation to the browser */
+    /* always stays in the natural position throughout the browser */
+    left: 0px;
+    top: 600px;
+}
+
+.five {
+    position: sticky;
+    /* sticks on the position you assign */
+    top: 100px;
+}
+
+.six {
+    height: 2000px;
+}
+
+.seven {
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
+    height: 50vh;
+    position: relative;
+}
+
+.sevensChild {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    outline: rgb(213, 130, 22) 1px dotted;
+    width: 50px;
+}
+
+.sevensChild p{
+    background-color: rgb(225, 241, 255);
+    color: rgb(213, 130, 22);
+    margin: 0px;
+}

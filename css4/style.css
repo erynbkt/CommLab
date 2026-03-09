@@ -1,0 +1,58 @@
+.container {
+    outline: 1px darkred dotted;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.second {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.center {
+    background-color: aliceblue;
+    width: 75%;
+}
+
+.header {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    outline: 1px solid white;
+    color: white;
+}
+
+.header p {
+    width: 40px;
+    text-align: center;
+}
+
+.box {
+    outline: 1px solid black;
+    width: 33.3%;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+
+
