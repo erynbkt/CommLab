@@ -1,0 +1,321 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: #4b4b4b;
+}
+
+#header {
+    display: flex;
+    padding-top: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+
+.progress {
+    background-color: rgb(229, 229, 229);
+    border-radius: 8px;
+    width: 885px;
+    height: 16px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 78.5vh;
+    width: 100%;
+}
+
+.task {
+    width: 600px;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    margin-bottom: 100px;
+}
+
+span {
+    position: relative;
+    right: 2px;
+    top: -3px;
+}
+
+.hidden-text {
+    display: none;
+    background-color: #f7f7f7;
+    padding: 5px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 4px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+}
+
+.task a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.hover-parent {
+    position: relative; 
+}
+
+.hover-parent:hover .hidden-text {
+    display: block;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 60px;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+
+.options .one {
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 12px;
+    margin-right: 10px;
+    width: 60px;
+    text-align: center;
+} 
+
+.options .two {
+    border: 2px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    color: rgb(229, 229, 229);
+    border-radius: 12px;
+    width: 60px;
+    text-align: center;
+}
+
+#footer {
+    border-top: 2px solid rgb(229, 229, 229);
+    background-color: rgb(255, 223, 224);
+    height: 140px;
+    padding-top: 28px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+}
+
+.gradient-one {
+    height: 3000px;
+    background: linear-gradient(rgb(255, 223, 224), rgb(0, 0, 0));
+}
+
+.gradient-two {
+    display: flex;
+    justify-content: center;
+    height: 3000px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(69, 22, 25))
+}
+
+.gradient-two h1 {
+    color: rgb(234, 43, 43);
+}
+
+.gradient-three {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(69, 22, 25);
+}
+
+.gradient-four {
+    height: 3000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background:linear-gradient(rgba(69, 22, 25), #58cc02) ;
+    
+}
+
+.gradient-five {
+    height: 2700px;
+    background-color: #58cc02;
+}
+
+.gradient-five .one {
+    position: relative;
+    height: 40px;
+    top: 1200px;
+    left: 400px;
+}
+.gradient-five .one:hover {
+    height: 20px;
+}
+.gradient-five .two {
+    position: relative;
+    height: 90px;
+    left: 200px;
+    top: 300px;
+}
+.gradient-five .two:hover {
+    height: 10px;
+}
+.three {
+    position: relative;
+    height: 20px;
+    top: 1400px;
+    left: 930px;
+}
+.three:hover {
+    height: 10px;
+}
+.four {
+    position: relative;
+    height: 100px;
+    top: 700px;
+    left: 600px;
+}
+.four:hover {
+    height: 70px;
+}
+.five {
+    position: relative;
+    height: 60px;
+    top: 200px;
+    left: 300px;
+}
+.five:hover {
+    height: 40px;
+}
+.six {
+    position: relative;
+    height: 40px;
+    top: 600px;
+    left: 50px;
+}
+.six:hover {
+    height: 20px;
+}
+.seven {
+    position: relative;
+    height: 170px;
+    top: 1000px;
+    left: 500px;
+}
+.seven:hover {
+    height: 140px;
+}
+.eight {
+    position: relative;
+    height: 90px;
+    top: 1100px;
+    left: 0px;
+}
+.eight:hover {
+    height: 70px;
+}
+.nine {
+    position: relative;
+    height: 20px;
+    top: 250px;
+    left: 150px;
+
+}
+.nine:hover {
+    height: 10px;
+}
+.ten {
+    position: relative;
+    height: 40px;
+    top: 760px;
+    right: 900px;
+}
+.ten:hover {
+    height: 20px;
+}
+.eleven {
+    position: relative;
+    height: 130px;
+    top: 200px;
+    left: 250px;
+
+}
+.eleven:hover {
+    height: 100px;
+}
+.twelve {
+    position: relative;
+    height: 200px;
+    top: 530px;
+    right: 5px;
+
+}
+.twelve:hover {
+    height: 160px;
+}
+.thirteen {
+    position: relative;
+    height: 50px;
+    top: 450px;
+    left: 50px;
+}
+.thirteen:hover {
+    height: 30px;
+}
+.fourteen {
+    position: relative;
+    height: 70px;
+    top: 950px;
+    right: 1300px;
+}
+.fourteen:hover {
+    height: 50px;
+}
+.fifteen {
+    position: relative;
+    height: 20px;
+    top: 630px;
+    left: 700px;
+}
+.fifteen:hover {
+    height: 10px;
+}
+
+.button {
+    width: 75px;
+    height: 46px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border-radius: 16px;
+    background-color: rgb(255, 75, 75);
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#footer-two {
+    border-top: 2px solid rgb(229, 229, 229);
+    position: sticky;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+    height: 140px;
+}
+
+.footer-two {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 22.5%;
+}
+
+.button {
+    width: 165px;
+    height: 46px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: rgb(88, 204, 2);
+}

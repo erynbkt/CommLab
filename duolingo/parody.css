@@ -1,6 +1,6 @@
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    color: #4b4b4b;
+    background-color: black;
 }
 
 .top {
@@ -42,49 +42,46 @@ body {
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
-    color: #4b4b4b;
+    color: #ff4b4b;
 }
 
 .button {
     background-color: white;
-    color: rgb(28, 176, 246);
+    color: #ff4b4b;
     border: 2px solid rgb(229, 229, 229);
     border-radius: 12px;
     height: 44px;
     width: 326px;
 }
 
-.one{
-    background-color: rgb(88, 204, 2);
+.one {
+    background-color: #ff4b4b;
+    color: black;
     margin-top: 40px;
     margin-bottom: 12px;
 }
 
-.one a {
-    text-decoration: none;
-    color: white;
-}
 
-
-.bottom{
+.bottom {
     border-top: 2px solid rgb(229, 229, 229);
     border-bottom: 2px solid rgb(229, 229, 229);
-    color: #4b4b4b;
+    color: ;
     /* display: flex; */
     /* overflow: scroll; */
     margin-left: 22.5%;
     margin-right: 22.5%;
     overflow: scroll;    
 }
-.slider{
+.slider {
     display: flex;
     width: 1700px;
 }
 
-.slider div{
+.slider div {
     width: 111px;
     display: flex;
     margin-right: 20px;
+    color: #afafaf;
 }
 
 .slider img {
@@ -107,10 +104,11 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 473px;
+    color: #afafaf;
 }
 
 .text h1 {
-    color: rgb(88, 204, 2);
+    color: #ff4b4b;
 }
 
 .footer {
@@ -123,7 +121,7 @@ body {
 }
 
 #footer {
-    background-color: rgb(88, 204, 2);
+    background-color: rgb(88, 167, 0);
 }
 
 .footer h3 {

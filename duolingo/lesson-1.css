@@ -1,0 +1,117 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: #4b4b4b;
+}
+
+#header {
+    display: flex;
+    padding-top: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+
+.progress {
+    background-color: rgb(229, 229, 229);
+    border-radius: 8px;
+    width: 885px;
+    height: 16px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 78.5vh;
+    width: 100%;
+}
+
+.task {
+    width: 600px;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    margin-bottom: 100px;
+}
+
+.hidden-text {
+    display: none;
+    background-color: #f7f7f7;
+    padding: 5px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 4px;
+    position: absolute;
+    top: -40px;
+}
+
+.task a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.hover-parent {
+    position: relative; 
+}
+
+.hover-parent:hover .hidden-text {
+    display: block;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 60px;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+
+.one {
+    border: 2px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    color: rgb(229, 229, 229);
+    border-radius: 12px;
+    margin-right: 10px;
+    width: 60px;
+    text-align: center;
+} 
+
+.options a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.two {
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 12px;
+    width: 60px;
+    text-align: center;
+}
+
+#footer {
+    border-top: 2px solid rgb(229, 229, 229);
+    position: sticky;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 22.5%;
+}
+
+.button {
+    width: 165px;
+    height: 46px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: rgb(88, 204, 2);
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

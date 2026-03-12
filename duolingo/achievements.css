@@ -1,0 +1,97 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: #4b4b4b;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 68.5vh;
+    width: 100%;
+}
+
+.options {
+    width: 600px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 2px solid rgb(229, 229, 229);
+    border-left: 2px solid rgb(229, 229, 229);
+    border-right: 2px solid rgb(229, 229, 229);
+}
+
+.buttons:first-of-type {
+    border-top-left-radius: 12px ;
+    border-top-right-radius: 12px;
+}
+
+.buttons:last-of-type {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+}
+
+.hidden-text {
+    display: none;
+    background-color: #ffc800;
+    padding: 10px;
+    border: 2px solid #ff9600;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    right: 280px;
+    top: 4px;
+}
+
+.buttons {
+    position: relative; 
+}
+
+.buttons:hover {
+    border: 2px solid #ff9600;
+    background-color: #ffc800;
+    color: white;
+}
+
+.buttons:hover .hidden-text {
+    display: block;
+}
+
+.duo {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer {
+    border-top: 2px solid rgb(229, 229, 229);
+    position: sticky;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 22.5%;
+}
+
+.button {
+    width: 165px;
+    height: 46px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: rgb(88, 204, 2);
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

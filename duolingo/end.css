@@ -1,0 +1,73 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 84.5vh;
+    width: 100%;
+}
+
+h1 {
+    color: rgb(255, 200, 0);
+}
+
+.achievements {
+    display: flex;
+    justify-content: center;
+}
+
+.xp {
+    height: 94px;
+    width: 164px;
+    border-top: 16px solid rgb(255, 200, 0);
+    border-left: 2px solid rgb(255, 200, 0);
+    border-bottom: 2px solid rgb(255, 200, 0);
+    border-right: 2px solid rgb(255, 200, 0);
+    color: rgb(255, 200, 0);
+    border-radius: 16px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.learned {
+    height: 94px;
+    width: 164px;
+    border-top: 16px solid rgb(88, 204, 2);
+    border-left: 2px solid rgb(88, 204, 2);
+    border-bottom: 2px solid rgb(88, 204, 2);
+    border-right: 2px solid rgb(88, 204, 2);
+    color: rgb(88, 204, 2);
+    border-radius: 16px;
+    text-align: center;
+}
+
+#footer {
+    border-top: 2px solid rgb(229, 229, 229);
+    position: sticky;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 22.5%;
+}
+
+.button {
+    width: 165px;
+    height: 46px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: rgb(88, 204, 2);
+}
+
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
