@@ -129,6 +129,23 @@ span {
     background-color: rgb(69, 22, 25);
 }
 
+@keyframes diagonalMove {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gradient-three img {
+  animation: 1s diagonalMove;
+  animation-timeline: view(inline-block 100% 0%);
+}
+
+
 .gradient-four {
     height: 3000px;
     display: flex;
