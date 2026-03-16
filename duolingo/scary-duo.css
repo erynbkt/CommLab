@@ -129,20 +129,21 @@ span {
     background-color: rgb(69, 22, 25);
 }
 
-@keyframes diagonalMove {
+@keyframes appear {
   from {
-    transform: translateY(100px);
     opacity: 0;
+    scale: 0.2;
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    scale: 1.5;
   }
 }
 
 .gradient-three img {
-  animation: 1s diagonalMove;
-  animation-timeline: view(inline-block 100% 0%);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 100%;
 }
 
 
@@ -167,72 +168,72 @@ span {
     top: 1200px;
     left: 400px;
 }
-.gradient-five .one:hover {
+/* .gradient-five .one:hover {
     height: 20px;
-}
+} */
 .gradient-five .two {
     position: relative;
     height: 90px;
     left: 200px;
     top: 300px;
 }
-.gradient-five .two:hover {
+/* .gradient-five .two:hover {
     height: 10px;
-}
+} */
 .three {
     position: relative;
     height: 20px;
     top: 1400px;
     left: 930px;
 }
-.three:hover {
+/* .three:hover {
     height: 10px;
-}
+} */
 .four {
     position: relative;
     height: 100px;
     top: 700px;
     left: 600px;
 }
-.four:hover {
+/* .four:hover {
     height: 70px;
-}
+} */
 .five {
     position: relative;
     height: 60px;
     top: 200px;
     left: 300px;
 }
-.five:hover {
+/* .five:hover {
     height: 40px;
-}
+} */
 .six {
     position: relative;
     height: 40px;
     top: 600px;
     left: 50px;
 }
-.six:hover {
+/* .six:hover {
     height: 20px;
-}
+} */
 .seven {
     position: relative;
     height: 170px;
     top: 1000px;
     left: 500px;
 }
-.seven:hover {
+/* .seven:hover {
     height: 140px;
-}
+} */
 .eight {
     position: relative;
     height: 90px;
     top: 1100px;
     left: 0px;
 }
-.eight:hover {
+/* .eight:hover {
     height: 70px;
-}
+} */
 .nine {
     position: relative;
     height: 20px;
@@ -240,18 +241,18 @@ span {
     left: 150px;
 
 }
-.nine:hover {
+/* .nine:hover {
     height: 10px;
-}
+} */
 .ten {
     position: relative;
     height: 40px;
     top: 760px;
     right: 900px;
 }
-.ten:hover {
+/* .ten:hover {
     height: 20px;
-}
+} */
 .eleven {
     position: relative;
     height: 130px;
@@ -259,9 +260,9 @@ span {
     left: 250px;
 
 }
-.eleven:hover {
+/* .eleven:hover {
     height: 100px;
-}
+} */
 .twelve {
     position: relative;
     height: 200px;
@@ -269,35 +270,43 @@ span {
     right: 5px;
 
 }
-.twelve:hover {
+/* .twelve:hover {
     height: 160px;
-}
+} */
 .thirteen {
     position: relative;
     height: 50px;
     top: 450px;
     left: 50px;
 }
-.thirteen:hover {
+/* .thirteen:hover {
     height: 30px;
-}
+} */
 .fourteen {
     position: relative;
     height: 70px;
     top: 950px;
     right: 1300px;
 }
-.fourteen:hover {
+/* .fourteen:hover {
     height: 50px;
-}
+} */
 .fifteen {
     position: relative;
     height: 20px;
     top: 630px;
     left: 700px;
 }
-.fifteen:hover {
+/* .fifteen:hover {
     height: 10px;
+} */
+
+.eye {
+    transition: 150ms ease;
+}
+
+.eye:hover {
+    scale: 0.4;
 }
 
 .button {
