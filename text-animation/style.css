@@ -1,0 +1,85 @@
+body {
+    background: black;
+    color: white;
+    font-family: cursive;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.text[class*="a"] {
+    left: 20%;
+}
+
+.text[class*="b"] {
+    right: 20%;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes unstable {
+    0% { opacity: 0; transform: translateY(-50%) translateX(0); }
+    20% { opacity: 1; }
+    50% { opacity: 0.7; transform: translateY(-50%) translateX(-20px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes stay {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.a1 {
+    animation: appear 4s ease forwards;
+    animation-delay: 1s;
+}
+
+.b1 {
+    animation: unstable 4s ease forwards;
+    animation-delay: 3s; /* delayed response */
+}
+
+.a2 {
+    animation: appear 4s ease forwards;
+    animation-delay: 6s;
+}
+
+.b2 {
+    animation: unstable 4s ease forwards;
+    animation-delay: 7s;
+}
+
+.a3 {
+    animation: stay 6s ease forwards;
+    animation-delay: 11s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+

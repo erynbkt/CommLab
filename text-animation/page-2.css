@@ -1,0 +1,116 @@
+body {
+    background: black;
+    color: white;
+    font-family: cursive;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.text[class*="a"] {
+    left: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text[class*="b"] {
+    right: 20%;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.a1 {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    height: 500px;
+}
+
+.hidden-text {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    opacity: 0;
+    max-width: 60vw;
+    transition: opacity 0.1s steps(1); 
+    display: inline-block;
+    background-color: brown;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.a1:hover .hidden-text {
+    animation: typing 3s steps(40) forwards;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes stay {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.a1 {
+    animation: stay 4s ease forwards;
+}
+
+.b1 {
+    opacity: 0;
+    margin-top: 100px;
+}
+
+.a1:hover .b1 {
+    animation: stay 2s ease forwards;
+    animation-delay: 5s;
+}
+
+@keyframes appear {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.a2 {
+    opacity: 0;
+    margin-top: 140px;
+}
+
+.a1:hover .a2 {
+    animation: appear 4s ease forwards;
+    animation-delay: 8s;
+}
+
+.b2 {
+    opacity: 0;
+    margin-top: 180px;
+}
+
+.a1:hover .b2 {
+    animation: stay 2s ease forwards;
+    animation-delay: 10s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
