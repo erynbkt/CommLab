@@ -1,0 +1,16 @@
+body{
+    background-image: radial-gradient(#b9e81e, #ebf8e1, #e3fe33);
+}
+
+@keyframes floatUpDown {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(110vh); }
+    100% { transform: translateY(0); }
+}
+
+.dot {
+    position: absolute;
+    top: -100px;
+    background: black;
+    border-radius: 50%;
+}
