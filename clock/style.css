@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+#screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  white-space: nowrap;
+  user-select: none;
+  color: white;
+}

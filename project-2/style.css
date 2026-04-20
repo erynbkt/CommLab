@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'headlineFont'; /* The name you will use in your CSS */
+  src: url('headline-font') format('woff'),  
+}
+
+h1 {
+  font-family: 'headlineFont', sans-serif;
+}
+
+h1 {
+    height: 100vh;
+    margin: 0;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}

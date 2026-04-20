@@ -1,0 +1,31 @@
+body {
+    background-color:darkseagreen;
+}
+
+.enclosure {
+    width: 100px;
+    height: 100px;
+    background-color:blanchedalmond;
+    position: absolute;
+}
+
+#giraffeEnclosure {
+    left: 20%;
+    top: 20%;
+}
+
+#monkeyEnclosure {
+    left: 40%;
+    top: 80%;
+}
+
+#snakeEnclosure {
+    left: 70%;
+    top: 50%;
+}
+
+.monkey {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
