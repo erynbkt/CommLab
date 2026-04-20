@@ -107,4 +107,4 @@ function tick() {
   seconds.style.top  = sTop  + "px";
 }
 
-setInterval(tick, 16);
+setInterval(tick, 16); //run every 60x every second forever
