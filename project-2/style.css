@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'headlineFont'; /* The name you will use in your CSS */
+  font-family: 'headlineFont';
   src: url('headline-font') format('woff'),  
 }
 
@@ -7,18 +7,37 @@ h1 {
   font-family: 'headlineFont', sans-serif;
 }
 
-h1 {
-    height: 100vh;
-    margin: 0;   
+.windowHeight{
+  outline: black dotted 4px;
+    
+  height: 100vh;
+  width: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year{
+    pointer-events: none;
+    
+    position: fixed;
+    top: 0.1px;
+    left: 0.1px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+.specialWrapper p{
+    pointer-events: all;
 }
 
-div {
-    width: 100%;
-    max-width: 600px;
-    margin: 0;
-    display: flex;
-    align-items: center;
+.specialWrapper p span{
+    position: relative;
+    display: inline-block;
+    transition: transform 0.1s ease;
 }

@@ -14,7 +14,7 @@ function addMover(element){
     element.addEventListener("mouseover", spanHovered);
 }
 
-let allSpans = document.querySelectorAll(".year");
+let allSpans = document.querySelectorAll("span");
 allSpans.forEach(addMover)
 
 
@@ -28,13 +28,16 @@ window.addEventListener("scroll", function(){
     console.log("scrolls")//step 1: know that it scrolls
 
     // select the first letter
-    let firstSpan = allSpans[0];
+    let firstSpan = document.querySelector("span:nth-child(1)");
     // move it using the "top" attribute
-    // let max_y = 200;
+    let max_y = 200;
     let y1 = max_y1*(percentage);
     firstSpan.style.top = y1+"px"
     // move it to a point that involves the percentage variable
+    
+    document.querySelector("span:nth-child(2)").style.top = ((percentage)*-200)+"px";
 })
+
 
 function getScrollPercentage() {
     // how many pixels have we scrolled yet?
@@ -54,19 +57,19 @@ function getScrollPercentage() {
     return percentage;
 }
 
-// let angle = 360;
+let angle = 360;
 
-// function spinElm(element){
-//     // let ranDegree = Math.random()*1000;
-//     // element.style.transform = "rotate("+ranDegree+"deg)";
-//     element.style.transform = "rotate("+angle+"deg)";
-//     angle = angle + 360;
+function spinElm(element){
+    // let ranDegree = Math.random()*1000;
+    // element.style.transform = "rotate("+ranDegree+"deg)";
+    element.style.transform = "rotate("+angle+"deg)";
+    angle = angle + 360;
 
-// }
+}
 
-// function spinAllLetters(){
-//     let allSpans = document.querySelectorAll("span");
-//     allSpans.forEach(spinElm);
-// }
+function spinAllLetters(){
+    let allSpans = document.querySelectorAll("span");
+    allSpans.forEach(spinElm);
+}
 
-// document.querySelector("#spinButton").addEventListener("click", spinAllLetters)
+document.querySelector("#spinButton").addEventListener("click", spinAllLetters)
