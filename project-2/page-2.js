@@ -4,7 +4,7 @@
 
 setTimeout(function () {
   container.style.opacity = 1
-}, 3000)
+}, 1000)
 
 let fgImage = document.querySelector("#i1")
 let bgImage = document.querySelector("#i2")
