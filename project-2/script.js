@@ -1,72 +1,135 @@
-// old code:
-function spanHovered(eventInfo){
-    console.log("hello");
+let headline = document.querySelector("#headline")
+let year = document.querySelector("#year")
+let endMessage = document.querySelector("#end-message")
 
-    let btn  = document.querySelector("button");
-
-    eventInfo.target.style.color = "red";
-    let randomX = Math.random()*200-100; // -100 to 100
-    let randomY = Math.random()*200-100; // -100 to 100
-    eventInfo.target.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
-}
-
-function addMover(element){
-    element.addEventListener("mouseover", spanHovered);
-}
-
-let allSpans = document.querySelectorAll(".year");
-allSpans.forEach(addMover)
-
-
-
-let max_y1 = Math.random()*600-300;
-
-
-window.addEventListener("scroll", function(){
-    let percentage = getScrollPercentage();
-    console.log("percentage", percentage)
-    console.log("scrolls")//step 1: know that it scrolls
-
-    // select the first letter
-    let firstSpan = allSpans[0];
-    // move it using the "top" attribute
-    // let max_y = 200;
-    let y1 = max_y1*(percentage);
-    firstSpan.style.top = y1+"px"
-    // move it to a point that involves the percentage variable
-})
+let lastDigitSlider = document.querySelector("#last-digit-slider")
+let lastDigitCurrent = document.querySelector("#last-digit-current")
+let lastDigitNext = document.querySelector("#last-digit-next")
+ 
+let secondToLastDigitSlider = document.querySelector("#second-to-last-digit-slider")
+let secondToLastDigitCurrent = document.querySelector("#second-to-last-digit-current")
+let secondToLastDigitNext = document.querySelector("#second-to-last-digit-next")
+ 
+let alreadyNavigated = false
 
 function getScrollPercentage() {
-    // how many pixels have we scrolled yet?
-    let scrolledAlready = window.scrollY;
-
-    // how high is our page?
-    let pageHeight = document.body.scrollHeight;
-
-    // how high is the window?
-    let windowHeight = window.innerHeight;
-
-    // how far can we scroll?
-    let possibleScrollSpace = pageHeight - windowHeight;
-
-    // console.log(scrolledAlready, possibleScrollSpace);
-    let percentage = (scrolledAlready / possibleScrollSpace);
-    return percentage;
+    let scrolledAlready = window.scrollY
+    let pageHeight = document.body.scrollHeight
+    let windowHeight = window.innerHeight
+    let possibleScrollSpace = pageHeight - windowHeight
+    return scrolledAlready / possibleScrollSpace
 }
+ 
+ 
+window.addEventListener("scroll", function () {
+    let percentage = getScrollPercentage()
+ 
+    if (percentage < 0.12) {
+        headline.style.opacity = 1
+    } else if (percentage < 0.24) {
+        headline.style.opacity = 1 - (percentage - 0.12) / 0.12 
+    } else {
+        headline.style.opacity = 0
+    }
+ 
+ 
+    if (percentage < 0.18) {
+        year.style.opacity = 0
+ 
+    } else if (percentage < 0.30) {
+        year.style.opacity = (percentage - 0.18) / 0.12
+ 
+    } else {
+        year.style.opacity = 1
+    }
 
-// let angle = 360;
+ 
+    if (percentage < 0.33) {
+        lastDigitCurrent.innerText = "5"
+        lastDigitNext.innerText = "6"
+        lastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.43) {
+        let progress = (percentage - 0.33) / 0.10
+        lastDigitCurrent.innerText = "5"
+        lastDigitNext.innerText = "6"
+        lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else if (percentage < 0.47) {
+        lastDigitCurrent.innerText = "6"
+        lastDigitNext.innerText = "7"
+        lastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.55) {
+        let progress = (percentage - 0.47) / 0.08
+        lastDigitCurrent.innerText = "6"
+        lastDigitNext.innerText = "7"
+        lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else if (percentage < 0.59) {
+        lastDigitCurrent.innerText = "7"
+        lastDigitNext.innerText = "8"
+        lastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.66) {
+        let progress = (percentage - 0.59) / 0.07
+        lastDigitCurrent.innerText = "7"
+        lastDigitNext.innerText = "8"
+        lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else if (percentage < 0.70) {
+        lastDigitCurrent.innerText = "8"
+        lastDigitNext.innerText = "9"
+        lastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.77) {
+        let progress = (percentage - 0.70) / 0.07
+        lastDigitCurrent.innerText = "8"
+        lastDigitNext.innerText = "9"
+        lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else if (percentage < 0.81) {
+        lastDigitCurrent.innerText = "9"
+        lastDigitNext.innerText = "0"
+        lastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.90) {
+        let progress = (percentage - 0.81) / 0.09
+        lastDigitCurrent.innerText = "9"
+        lastDigitNext.innerText = "0"
+        lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else {
+        lastDigitCurrent.innerText = "0"
+        lastDigitNext.innerText = "0"
+        lastDigitSlider.style.transform = "translateY(0%)"
+    }
+ 
+ 
+    if (percentage < 0.81) {
+        secondToLastDigitCurrent.innerText = "6"
+        secondToLastDigitNext.innerText = "7"
+        secondToLastDigitSlider.style.transform = "translateY(0%)"
+ 
+    } else if (percentage < 0.90) {
+        let progress = (percentage - 0.81) / 0.09
+        secondToLastDigitCurrent.innerText = "6"
+        secondToLastDigitNext.innerText = "7"
+        secondToLastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+ 
+    } else {
+        secondToLastDigitCurrent.innerText = "7"
+        secondToLastDigitNext.innerText = "7"
+        secondToLastDigitSlider.style.transform = "translateY(0%)"
+    }
+ 
+  
+    if (percentage >= 0.90) {
+        year.style.opacity = "0"
+    }
 
-// function spinElm(element){
-//     // let ranDegree = Math.random()*1000;
-//     // element.style.transform = "rotate("+ranDegree+"deg)";
-//     element.style.transform = "rotate("+angle+"deg)";
-//     angle = angle + 360;
-
-// }
-
-// function spinAllLetters(){
-//     let allSpans = document.querySelectorAll("span");
-//     allSpans.forEach(spinElm);
-// }
-
-// document.querySelector("#spinButton").addEventListener("click", spinAllLetters)
+    if (percentage >= 0.99) {
+        window.location.href = "page-2.html"
+    }
+ 
+})

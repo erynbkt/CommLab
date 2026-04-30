@@ -7,37 +7,65 @@ h1 {
   font-family: 'headlineFont', sans-serif;
 }
 
-.windowHeight{
-  outline: black dotted 4px;
-    
-  height: 100vh;
-  width: 100%;
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'headlineFont';
 }
-
-.year{
-    pointer-events: none;
-    
-    position: fixed;
-    top: 0.1px;
-    left: 0.1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ 
+body {
+    background: white;
+    height: 800vh;
+    font-size: 100px;
+}
+ 
+#page {
+    position: sticky;
+    top: 0;
     height: 100vh;
-    width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-.specialWrapper p{
-    pointer-events: all;
+
+#headline {
+    font-weight: 300;
+    /* font-size: 8vw; */
+    color: black;
+    letter-spacing: 0.06em;
+    position: absolute;
+    text-align: center;
 }
 
-.specialWrapper p span{
-    position: relative;
-    display: inline-block;
-    transition: transform 0.1s ease;
+ 
+#year {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* font-size: 30vw; */
+    color: black;
+    line-height: 1;
+    opacity: 0;
+    user-select: none;
+    transition: opacity 1s ease;
+}
+
+.slot {
+    height: 1em;
+    overflow: hidden;
+    display: block;
+}
+ 
+.slot-inner {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.slot-inner .d {
+    display: block;
+    height: 1em;
+    line-height: 1em;
 }

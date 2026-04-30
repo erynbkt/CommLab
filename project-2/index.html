@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,43 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="windowHeight"><h1 id="title">ONE BY ONE</h1></div>
-    <div class="windowHeight"></div>
-    <div class="windowHeight"></div>
-    <div class="windowHeight"></div>
-    <div class="windowHeight"></div>
-    <div class="windowHeight"></div>
-    <div class="windowHeight"></div>
-    <h1 class="year"><span>1</span><span>9</span><span>6</span><span>5</span></h1>
+    <div id="page">
+        <h1 id="headline">one by one</h1>
+
+        <div id="year">
+
+            <div class="slot">
+                <div class="slot-inner">
+                    <div class="digit">1</div>
+                    <div class="digit">1</div>
+                </div>
+            </div>
+
+            <div class="slot">
+                <div class="slot-inner">
+                    <div class="digit">9</div>
+                    <div class="digit">9</div>
+                </div>
+            </div>
+
+            <div class="slot">
+                <div class="slot-inner" id="second-to-last-digit-slider">
+                    <div class="digit" id="second-to-last-digit-current">6</div>
+                    <div class="digit" id="second-to-last-digit-next">7</div>
+                </div>
+            </div>
+
+            <div class="slot">
+                <div class="slot-inner" id="last-digit-slider">
+                    <div class="digit" id="last-digit-current">5</div>
+                    <div class="digit" id="last-digit-next">6</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
+
 </html>

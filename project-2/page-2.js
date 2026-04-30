@@ -1,17 +1,142 @@
-let window = document.querySelector(".window");
-let img = document.querySelector(".hover-img");
+// const cursorCircle = document.querySelector(".cursor-circle");
 
-window.addEventListener("hover", function(event) {
+// const heading = document.querySelector(".container h1");
 
-  let x = event.offsetX / window.offsetWidth;
-  let y = event.offsetY / window.offsetHeight;
+setTimeout(function () {
+  container.style.opacity = 1
+}, 3000)
 
-  let moveX = (x - 0.5) * -30;
-  let moveY = (y - 0.5) * -30;
+let fgImage = document.querySelector("#i1")
+let bgImage = document.querySelector("#i2")
 
-  img.style.transform = "translate(" + moveX + "px, " + moveY + "px)";
-});
+let container = document.querySelector(".container")
+var rect = container.getBoundingClientRect();
+console.log(rect.top, rect.right, rect.bottom, rect.left);
 
-window.addEventListener("mouseleave", function() {
-  img.style.transform = "translate(0px, 0px)";
-});
+
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  console.log("mouseY:", mouseY)
+
+
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+  let mouseXperc = mouseX / windowWidth - .5;
+  let mouseYperc = mouseY / windowHeight - .5;
+  console.log(mouseXperc, mouseYperc)
+
+  // let cloudXrange = 200;
+  // let cloudTranslateX = cloudXrange*mouseXperc;
+  // let cloudYrange = 200;
+  // let cloudTranslateY = cloudYrange*mouseYperc;
+  // fgImage.style.transform = "translate("+cloudTranslateX+"px, "+cloudTranslateY+"px)";
+
+
+  let bgXrange = 200;
+  let bgTranslateX = bgXrange * mouseXperc * -1;
+  let bgYrange = 200;
+  let bgTranslateY = bgYrange * mouseYperc * -1;
+  bgImage.style.transform = "translate(" + bgTranslateX + "px, " + bgTranslateY + "px)";
+
+
+
+  document.addEventListener("click", function () {
+    if (mouseXperc > -0.01 && mouseYperc > -0.01 || mouseXperc < 0.01  && mouseYperc < 0.01) {
+      window.location.href = "page-3.html"
+    }
+  })
+
+
+
+  // let fgTransformY = 0;
+  // let fgTransformX = 0;
+  // //moving vertically - doesn't work :(
+  // if (mouseY >= rect.bottom){
+  //   // fgImage.style.top = "100px"
+  //   // bgImage.style.top = "-100px"
+  //   // fgImage.style.transform = "translateY(100px)"
+  //   fgTransformY = 100;
+  //   bgImage.style.transform = "translateY(-100px)"
+  // }
+  // else if (mouseY <=rect.top){
+  //   // fgImage.style.top = "-100px"
+  //   // bgImage.style.top = "100px"
+  //   // fgImage.style.transform = "translateY(-100px)"
+  //   fgTransformY = -100;
+  //   bgImage.style.transform = "translateY(100px)"
+  // }
+  // else {
+  //   // fgImage.style.transform = "translateY(0px)"
+  //   fgTransformY = 0;
+  //   bgImage.style.transform = "translateY(0px)"
+  // }
+
+  // //moving horizontally
+  // if (mouseX >= rect.right){
+  //   // fgImage.style.top = "100px"
+  //   // bgImage.style.top = "-100px"
+  //   // fgImage.style.transform = "translateX(100px)"
+  //   fgTransformX = 100;
+  //   bgImage.style.transform = "translateX(-100px)"
+  // }
+  // else if (mouseX <=rect.left){
+  //   // fgImage.style.top = "-100px"
+  //   // bgImage.style.top = "100px"
+  //   // fgImage.style.transform = "translateX(-100px)"
+  //   fgTransformX = -100; 
+  //   bgImage.style.transform = "translateX(100px)"
+  // }
+  // else {
+  //   // fgImage.style.transform = "translateX(0px)";
+  //   fgTransformX = 0;
+  //   bgImage.style.transform = "translateX(0px)"
+  // }
+  // fgImage.style.transform = "translate("+fgTransformX+"px, "+fgTransformY+"px)";
+
+
+
+
+
+
+  // if (mouseX)
+  // // move the circle to the cursor position
+  // cursorCircle.style.left = `${mouseX}px`;
+  // cursorCircle.style.top = `${mouseY}px`;
+
+  // // handle hover effect on the heading
+  // heading.addEventListener("mouseenter", ()=> {
+  //   cursorCircle.style.width = "320px"
+  //   cursorCircle.style.height = "320px"
+  //   cursorCircle.style.opacity = "1"
+  // });
+
+  // heading.addEventListener("mouseleave", ()=> {
+  //   cursorCircle.style.width = "25px"
+  //   cursorCircle.style.height = "25px"
+  //   cursorCircle.style.opacity = "0"
+
+  // });
+
+
+})
+
+
+
+
+// function headlineClicked(){
+//   window.location.href = "page-3.html";
+// }
+
+// heading.addEventListener("click", headlineClicked);
+
+
+
+
+
+
+
+
+
+
+// inspo: https://www.youtube.com/watch?v=nOOK3Z5h6bw
