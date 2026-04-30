@@ -95,30 +95,6 @@ document.addEventListener("mousemove", (e) => {
   // fgImage.style.transform = "translate("+fgTransformX+"px, "+fgTransformY+"px)";
 
 
-
-
-
-
-  // if (mouseX)
-  // // move the circle to the cursor position
-  // cursorCircle.style.left = `${mouseX}px`;
-  // cursorCircle.style.top = `${mouseY}px`;
-
-  // // handle hover effect on the heading
-  // heading.addEventListener("mouseenter", ()=> {
-  //   cursorCircle.style.width = "320px"
-  //   cursorCircle.style.height = "320px"
-  //   cursorCircle.style.opacity = "1"
-  // });
-
-  // heading.addEventListener("mouseleave", ()=> {
-  //   cursorCircle.style.width = "25px"
-  //   cursorCircle.style.height = "25px"
-  //   cursorCircle.style.opacity = "0"
-
-  // });
-
-
 })
 
 

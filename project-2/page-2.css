@@ -45,6 +45,12 @@ body {
   opacity: 0;
 }
 
+#i2 {
+  mask-image: url('images/black-blob.png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
 .blobWindow {
   position: absolute;
   top: 0;
