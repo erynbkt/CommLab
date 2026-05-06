@@ -1,6 +1,7 @@
 // const cursorCircle = document.querySelector(".cursor-circle");
 
 // const heading = document.querySelector(".container h1");
+let container = document.querySelector(".container")
 
 setTimeout(function () {
   container.style.opacity = 1
@@ -9,10 +10,11 @@ setTimeout(function () {
 let fgImage = document.querySelector("#i1")
 let bgImage = document.querySelector("#i2")
 
-let container = document.querySelector(".container")
 var rect = container.getBoundingClientRect();
 console.log(rect.top, rect.right, rect.bottom, rect.left);
 
+let mouseYperc = 0
+let mouseXperc = 0
 
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
@@ -22,30 +24,29 @@ document.addEventListener("mousemove", (e) => {
 
   let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
-  let mouseXperc = mouseX / windowWidth - .5;
-  let mouseYperc = mouseY / windowHeight - .5;
-  console.log(mouseXperc, mouseYperc)
+  mouseXperc = mouseX / windowWidth - .5;
+  mouseYperc = mouseY / windowHeight - .5;
+  console.log(mouseXperc, "mouseYperc" , mouseYperc)
 
-  // let cloudXrange = 200;
-  // let cloudTranslateX = cloudXrange*mouseXperc;
-  // let cloudYrange = 200;
-  // let cloudTranslateY = cloudYrange*mouseYperc;
-  // fgImage.style.transform = "translate("+cloudTranslateX+"px, "+cloudTranslateY+"px)";
-
-
-  let bgXrange = 200;
+  let bgXrange = 400;
   let bgTranslateX = bgXrange * mouseXperc * -1;
-  let bgYrange = 200;
+  let bgYrange = 400;
   let bgTranslateY = bgYrange * mouseYperc * -1;
   bgImage.style.transform = "translate(" + bgTranslateX + "px, " + bgTranslateY + "px)";
 
+  if (mouseYperc <= -0.35) {
+    document.body.style.cursor = "pointer"
+    console.log("cursor change")
+  } else {
+    document.body.style.cursor = "default"
+  }
+})
 
-
-  document.addEventListener("click", function () {
-    if (mouseXperc > -0.01 && mouseYperc > -0.01 || mouseXperc < 0.01  && mouseYperc < 0.01) {
-      window.location.href = "page-3.html"
-    }
-  })
+document.addEventListener("click", function () {
+  if (mouseYperc <= -0.35) {
+    window.location.href = "page-3.html"
+  }
+})
 
 
 
@@ -93,9 +94,6 @@ document.addEventListener("mousemove", (e) => {
   //   bgImage.style.transform = "translateX(0px)"
   // }
   // fgImage.style.transform = "translate("+fgTransformX+"px, "+fgTransformY+"px)";
-
-
-})
 
 
 

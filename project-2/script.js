@@ -1,6 +1,5 @@
 let headline = document.querySelector("#headline")
 let year = document.querySelector("#year")
-let endMessage = document.querySelector("#end-message")
 
 let lastDigitSlider = document.querySelector("#last-digit-slider")
 let lastDigitCurrent = document.querySelector("#last-digit-current")
@@ -11,6 +10,24 @@ let secondToLastDigitCurrent = document.querySelector("#second-to-last-digit-cur
 let secondToLastDigitNext = document.querySelector("#second-to-last-digit-next")
  
 let alreadyNavigated = false
+
+
+
+let start = document.querySelector("#start")
+let beginSound = document.querySelector("#beginSound")
+
+let message = document.querySelector("#message")
+
+
+let bgScene = document.querySelector("#bgScene")
+
+
+start.addEventListener("click", function() {
+    beginSound.loop = true
+    beginSound.play()
+    let howFarICanScroll = document.body.scrollHeight - window.innerHeight
+    window.scrollTo({ top: howFarICanScroll * 0.24, behavior: "smooth" })
+})
 
 function getScrollPercentage() {
     let scrolledAlready = window.scrollY
@@ -28,8 +45,10 @@ window.addEventListener("scroll", function () {
         headline.style.opacity = 1
     } else if (percentage < 0.24) {
         headline.style.opacity = 1 - (percentage - 0.12) / 0.12 
+        start.style.opacity = 1 - (percentage - 0.12) / 0.12
     } else {
         headline.style.opacity = 0
+        start.style.opacity = 0
     }
  
  
@@ -48,17 +67,26 @@ window.addEventListener("scroll", function () {
         lastDigitCurrent.innerText = "5"
         lastDigitNext.innerText = "6"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.style.opacity = 0
  
     } else if (percentage < 0.43) {
         let progress = (percentage - 0.33) / 0.10
         lastDigitCurrent.innerText = "5"
         lastDigitNext.innerText = "6"
         lastDigitSlider.style.transform = "translateY(" + (-progress * 50) + "%)"
+        message.innerText = "I was born into her arms"
+        message.style.opacity = 1
+        bgScene.src = "images/1965.jpg"
+        bgScene.style.opacity = 0.2
  
     } else if (percentage < 0.47) {
         lastDigitCurrent.innerText = "6"
         lastDigitNext.innerText = "7"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.innerText = "she was my whole world"
+        message.style.opacity = 1
+        bgScene.src = "images/1966.jpg"
+        bgScene.style.opacity = 0.2
  
     } else if (percentage < 0.55) {
         let progress = (percentage - 0.47) / 0.08
@@ -70,6 +98,10 @@ window.addEventListener("scroll", function () {
         lastDigitCurrent.innerText = "7"
         lastDigitNext.innerText = "8"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.innerText = "then a little one arrived"
+        message.style.opacity = 1
+        bgScene.src = "images/1967.jpg"
+        bgScene.style.opacity = 0.2
  
     } else if (percentage < 0.66) {
         let progress = (percentage - 0.59) / 0.07
@@ -81,6 +113,10 @@ window.addEventListener("scroll", function () {
         lastDigitCurrent.innerText = "8"
         lastDigitNext.innerText = "9"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.innerText = "I taught her what I'd learned"
+        message.style.opacity = 1
+        bgScene.src = "images/1968.jpg"
+        bgScene.style.opacity = 0.2
  
     } else if (percentage < 0.77) {
         let progress = (percentage - 0.70) / 0.07
@@ -92,6 +128,10 @@ window.addEventListener("scroll", function () {
         lastDigitCurrent.innerText = "9"
         lastDigitNext.innerText = "0"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.innerText = "one ahead, one behind"
+        message.style.opacity = 1
+        bgScene.src = "images/1968.jpg"
+        bgScene.style.opacity = 0.2
  
     } else if (percentage < 0.90) {
         let progress = (percentage - 0.81) / 0.09
@@ -103,6 +143,10 @@ window.addEventListener("scroll", function () {
         lastDigitCurrent.innerText = "0"
         lastDigitNext.innerText = "0"
         lastDigitSlider.style.transform = "translateY(0%)"
+        message.innerText = "the three of us, finally complete"
+        message.style.opacity = 1
+        bgScene.src = "images/1970.jpg"
+        bgScene.style.opacity = 0.2
     }
  
  
@@ -124,7 +168,7 @@ window.addEventListener("scroll", function () {
     }
  
   
-    if (percentage >= 0.90) {
+    if (percentage >= 0.93) {
         year.style.opacity = "0"
     }
 
@@ -134,4 +178,3 @@ window.addEventListener("scroll", function () {
  
 })
 
-// asdfghjk

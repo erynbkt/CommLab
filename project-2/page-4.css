@@ -1,0 +1,116 @@
+body {
+    background: black;
+    /* opacity: 0;
+    transition: opacity 2s ease; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#letter {
+    max-width: 750px;
+    text-align: center;
+    position: relative;
+}
+
+#english {
+    color: white;
+    line-height: 2;
+    mix-blend-mode: overlay;
+    display: none;
+}
+
+#arabic {
+    color: white;
+    line-height: 2;
+    direction: rtl;
+    /* display: none; */
+    mix-blend-mode: overlay;
+}
+
+#arabicSecondPart {
+    color: white;
+    line-height: 2;
+    direction: rtl;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* display: none; */
+    mix-blend-mode: overlay;
+}
+
+#stitchContainer {
+    color: white;
+    text-align: center;
+    mix-blend-mode: overlay;
+    display: none;
+}
+
+#stitchContainerEnglish {
+    display: none;
+    color: white;
+    mix-blend-mode: overlay;
+    text-align: center;
+}
+
+#englishSecondPart {
+    display: none;
+    color: white;
+    mix-blend-mode: overlay;
+    line-height: 2;
+}
+
+#languageSwitch {
+    opacity: 0;
+    transform: opacity 0.5s ease;
+    /* top: 40px;
+    right: 40px; */
+    color: #d4d4d4;
+    cursor: pointer;
+    text-align: center;
+    mix-blend-mode: overlay;
+    margin-top: 20px;
+}
+
+#languageSwitch:hover {
+    color: #ffffff;
+}
+
+#river {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    animation: wave 3s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.fish {
+    position: absolute;
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    filter: invert(0.3);
+    mix-blend-mode:lighten;
+}
+
+@keyframes wave {
+    0%   { border-radius: 40% 60% 40% 60% / 20px 20px 0 0; }
+    50%  { border-radius: 60% 40% 60% 40% / 30px 30px 0 0; }
+    100% { border-radius: 40% 60% 40% 60% / 20px 20px 0 0; }
+}
+
+#hint {
+    position: fixed;
+    bottom: 210px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    mix-blend-mode: overlay;
+    letter-spacing: 5px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
