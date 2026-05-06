@@ -112,6 +112,9 @@ function startArabicSecondPart() {
     }, 100)
 }
 
+
+// https://javascript.info/settimeout-setinterval
+
 // ---------------------------------------------------------------------------------
 
 let allFish = document.querySelectorAll(".fish")
