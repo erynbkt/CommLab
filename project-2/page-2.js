@@ -4,17 +4,17 @@
 let container = document.querySelector(".container")
 
 setTimeout(function () {
-  container.style.opacity = 1
+  container.style.opacity = 1;
 }, 1000)
 
-let fgImage = document.querySelector("#i1")
-let bgImage = document.querySelector("#i2")
+let fgImage = document.querySelector("#i1");
+let bgImage = document.querySelector("#i2");
 
 var rect = container.getBoundingClientRect();
 console.log(rect.top, rect.right, rect.bottom, rect.left);
 
-let mouseYperc = 0
-let mouseXperc = 0
+let mouseYperc = 0;
+let mouseXperc = 0;
 
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
@@ -35,16 +35,16 @@ document.addEventListener("mousemove", (e) => {
   bgImage.style.transform = "translate(" + bgTranslateX + "px, " + bgTranslateY + "px)";
 
   if (mouseYperc <= -0.35) {
-    document.body.style.cursor = "pointer"
-    console.log("cursor change")
+    document.body.style.cursor = "pointer";
+    console.log("cursor change");
   } else {
-    document.body.style.cursor = "default"
+    document.body.style.cursor = "default";
   }
 })
 
 document.addEventListener("click", function () {
   if (mouseYperc <= -0.35) {
-    window.location.href = "page-3.html"
+    window.location.href = "page-3.html";
   }
 })
 

@@ -57,31 +57,31 @@ langSwitch.addEventListener("click", function() {
         arabicSecondEl.style.display  = "block";
         stitchContainer.style.display  = "block";
         langSwitch.innerText = "en";
-        showingArabic = true
+        showingArabic = true;
     }
 })
 
 // ------------------------------------------------------------------------------
-let arabicIndex = 0
+let arabicIndex = 0;
 
 setTimeout(function() {
     startArabicTyping()
-}, 500)
+}, 500);
 
 function startArabicTyping() {
     let arabicInterval = setInterval(function() {
-        arabicText.innerText = arabicFirstPart.slice(0, arabicIndex)
-        arabicIndex = arabicIndex + 1
+        arabicText.innerText = arabicFirstPart.slice(0, arabicIndex);
+        arabicIndex = arabicIndex + 1;
 
         if (arabicIndex > arabicFirstPart.length) {
-            clearInterval(arabicInterval)
-            startStitching()
+            clearInterval(arabicInterval);
+            startStitching();
         }
     }, 50)
 }
 
 function startStitching() {
-    console.log("stitching started")
+    console.log("stitching started");
     stitchContainer.style.display = "block";
     let stitchCount = 0;
 
@@ -95,7 +95,6 @@ function startStitching() {
         }
     }, 100)
 }
-
 
 
 function startArabicSecondPart() {
@@ -146,6 +145,6 @@ document.querySelector("#river").addEventListener("click", function() {
     }, 1000)
 
     setTimeout(function() {
-        window.location.href = "page-5.html"
+        window.location.href = "page-5.html";
     }, 2000)
 })
