@@ -1,7 +1,7 @@
 # One by One
 ### A web experience about sisterhood
 
-**By [Your Name]**
+**By Eryn**
 
 ---
 
